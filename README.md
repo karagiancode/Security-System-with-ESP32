@@ -1,5 +1,10 @@
 # Security-System-with-ESP32
-A home security system using the ESP32 and getting notified with Home Assistant, oled and buzzer
+A home security system using the ESP32 and getting notified with Home Assistant, oled and buzzer.
+
+We use two ESP32 boards: one as a transmitter and one as a receiver.
+The transmitter has a PIR sensor that detects motion. When motion is detected, a connected LED turns on.
+The receiver collects this data and also has a light sensor with a laser pointer. When the laser beam is interrupted, the sensor state changes.
+All data is sent to Home Assistant via MQTT. When motion or light interruption is detected, a buzzer is activated.
 
 We suugest the following steps in order to make it work.
 1. download the image from the following oficial site: https://www.home-assistant.io/installation/windows/
